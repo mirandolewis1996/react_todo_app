@@ -10,7 +10,7 @@ import apiRequest from "./component/apiRequest";
 
 function App() {
   // main logic
-  const API_URL = "http://localhost:3600/items";
+  const API_URL = "https://6a10a97bd2a9857070370650.mockapi.io/todos/v1/items/todos";
   const [items, setItems] = useState([]);
   const [load, setLoad] = useState(true);
   const [eror, setEror] = useState("");
@@ -29,7 +29,7 @@ function App() {
     const itmfind = itemchg.find((item) => item.id == id);
 
     const itmobj = {
-      method: "PATCH",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
